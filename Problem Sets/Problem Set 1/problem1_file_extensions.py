@@ -20,18 +20,20 @@
 # using if/elif/else:
 
 file_name = input(str('What is your file name? '))
-print(file_name)
 
-# if file_name.endswith('.png'):
-#     print('image/' + file_name)
-# elif file_name.endswith('.pdf', '.txt'):
-#     print('text/' + file_name)
-# elif file_name.endswith('.zip'):
-#     print('application/' + file_name)
-# else:
-#     print('application/octet-stream')
-
-
-match file_name.endswith(''):
-    case '.gif' | '.jpg' | '.jpeg' | '.png':
-        print('image/' + file_name)
+if file_name.endswith('.gif'):
+    print('image/gif')
+elif file_name.endswith('.jpg'):
+    print('image/jpg')
+elif file_name.endswith('.jpeg'):
+    print('image/jpeg')
+elif file_name.endswith('.png'):
+    print('image/png')
+elif file_name.endswith('.pdf'):
+    print('text/pdf')
+elif file_name.endswith('.txt'):
+    print('text/txt')
+elif file_name.endswith('.zip'):
+    print('application/zip')
+else:
+    print('application/octet-stream')
